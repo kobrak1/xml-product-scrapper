@@ -18,8 +18,12 @@ if len(sys.argv) > 1:
         print("MongoDB connection successful.")
     except Exception as e:
         print(f"MongoDB connection string is not valid: {e}")
+        print("Exitting...")
+        sys.exit(1)  # exits the script if connection with the db fails
 else:
     print("Mongodb connection string must be provided.")
+    print("Exitting...")
+    sys.exit(1)  # executes the script if conn string is not provided
     
 db = client['product_database']
 collection = db['products']
