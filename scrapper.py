@@ -21,7 +21,7 @@ if len(sys.argv) > 1:
         print("Exitting...")
         sys.exit(1)  # exits the script if connection with the db fails
 else:
-    print("Mongodb connection string must be provided.")
+    print("Mongodb connection string and file path must be provided.")
     print("Exitting...")
     sys.exit(1)  # executes the script if conn string is not provided
     
